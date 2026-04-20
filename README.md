@@ -1,2 +1,3 @@
-# dev-flakes
-Useful development flakes
+# Development Shell Environments
+
+Useful shell environments using nix.

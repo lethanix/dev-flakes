@@ -15,14 +15,16 @@
       {
         devShells = {
             default = pkgs.mkShell {
-              buildinputs = with pkgs; [
+              name = "default";
+              buildInputs = with pkgs; [
                   git
               ];
             };
 
             elixir = pkgs.mkShell {
-              buildinputs = with pkgs; [
-                beam28packages.elixir_1_19
+              name = "potion";
+              buildInputs = with pkgs; [
+                beam28Packages.elixir_1_19
               ];
 
               shellHook = ''

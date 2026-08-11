@@ -47,6 +47,18 @@
               bootdev --version
             '';
           };
+
+          golang = pkgs.mkShell {
+            name = "go";
+            buildInputs = with pkgs; [
+              go
+            ];
+
+            shellHook = ''
+              echo "Go environment ready"
+              go version
+            '';
+          };
         };
       });
 }
